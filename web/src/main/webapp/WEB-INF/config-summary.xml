@@ -114,7 +114,10 @@
 	  <facet name="sensorType" indexKey="sensorType" label="sensorType" />
 	  <facet name="platformType" indexKey="platformType" label="platformType" />
 	  <facet name="stakeholderType" indexKey="stakeholderType" label="stakeholderType" />
-	  <facet name="spatialRepresentationType" indexKey="spatialRepresentationType" label="spatialRepresentationType" />
+        <facet name="spatialRepresentationType" indexKey="spatialRepresentationType" label="spatialRepresentationType" />
+      
+      <!-- add facet for classification -->
+      <facet name="classification" indexKey="mdClassification" label="classification"/>
     <!--
     Example configuration for hierarchical facet based on
     the GeoNetwork region thesaurus or GEMET.
@@ -157,6 +160,7 @@
       <item facet="jurisdiction" max="40"/>
       <item facet="category" max="99" sortBy="value"
             translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
+      <item facet="classification" max="99" />
     </summaryType>
 
     <summaryType name="details" format="DIMENSION">
