@@ -1,0 +1,97 @@
+<ul class="list-group gn-resultview">
+  <li class="list-group-item" data-ng-repeat="md in searchResults.records"
+      gn-displayextent-onhover="" gn-zoomto-onclick
+      sxt-fix-mdlinks="">
+    <div class="media">
+
+      <!-- Thumbnail -->
+      <div class="pull-left gn-md-thumbnail" data-ng-class="{'gn-md-no-thumbnail': !md.getThumbnails().list[0].url}">
+        <img ng-src="{{md.getThumbnails().list[0].url}}" class="gn-img-thumbnail"
+             ng-if="md.getThumbnails().list[0].url"/>
+
+        <div data-ng-if="md.status_text.length > 0"
+          title="{{ md.status_text[0] }}"
+          class="gn-status gn-status-{{ md.status[0] }}">
+          {{ md.status_text[0] }}
+        </div>
+      </div>
+
+      <div class="media-body">
+        <h4>
+          <input gn-selection-md type="checkbox" ng-model="md['geonet:info'].selected"
+            ng-change="change()"/>
+          <a href="" gn-metadata-open="md" gn-metadata-open-selector=".gn-resultview"
+             title="{{md.title || md.defaultTitle}}">{{md.title || md.defaultTitle}} <span data-ng-if="md.altTitle">({{ md.altTitle }})</span></a>
+        </h4>
+        <p class="text-justify" dd-text-collapse dd-text-collapse-max-length="350"
+           dd-text-collapse-text="{{(md.abstract || md.defaultAbstract) | striptags}}"></p>
+        <p ng-if="md.credit" class="text-justify gn-md-credit">Sources: {{md.credit}}</p>
+
+        <style type="text/css">
+          .table-div {
+            width: 100%;
+          }
+          .t-row {
+            clear: both;
+          }
+          .key {
+            min-width: 100px;
+            float: left;
+            font-weight: bold;
+          }
+          .val {
+            float: left;
+            margin-left: 10px;
+          }
+
+        </style>
+        <div class="table-div">
+          <div class="t-row" data-ng-if="md.resOwner.length > 0">
+            <div class="key">
+              Owner
+            </div>
+            <div class="val">
+              <span data-ng-if="Array.isArray(md.resOwner)">
+                {{ md.resOwner[0] }}
+              </span>
+              <span data-ng-if="!Array.isArray(md.resOwner)">
+                {{ md.resOwner }}
+              </span>
+            </div>
+          </div>
+          <div class="t-row">
+            <div class="key">
+              Type
+            </div>
+            <div class="val">
+              <i data-placement="right" gn-tooltip class="fa">
+                <span class="fa gn-icon-{{ md.spatialRepresentationType_text }}"></span>
+              </i>&nbsp;{{ md.spatialRepresentationType_text }}
+            </div>
+          </div>
+          <div class="t-row">
+            <div class="key">
+              Scope
+            </div>
+            <div class="val">
+              <div data-ng-repeat="ty in md.type" style="text-transform:capitalize;">
+                <i class="fa"><span class="fa gn-icon-{{ ty }}"></span></i><span>&nbsp;{{ ty }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- button menus -->
+    <div class="pull-right">
+      <div gn-grid-related gn-grid-related-uuid="::md.getUuid()"
+        template="../../catalog/views/default/templates/gridRelated.html"></div>
+      <gn-links-btn></gn-links-btn>
+    </div>
+
+    <div style="clear: both;"></div>
+    
+  </li>
+</ul>
