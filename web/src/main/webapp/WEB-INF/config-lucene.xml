@@ -186,6 +186,13 @@
       <field name="attributeTable" tagName="attributeTable"/>
       <field name="draft" tagName="draft"/>
       <field name="databaseid" tagName="databaseid"/>
+
+      <!-- ADDED FOR DELWP -->
+      <field name="resOwner" tagName="resOwner"/>
+      <field name="altTitle" tagName="altTitle"/>
+      <field name="mdClassification" tagName="mdClassification"/>
+      <field name="resClassification" tagName="resClassification"/>
+      <field name="anzlicid" tagName="anzlicid"/>
     </dumpFields>
   </search>
 
