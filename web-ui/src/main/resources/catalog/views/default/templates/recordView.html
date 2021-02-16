@@ -129,10 +129,11 @@
           {{mdView.current.record.title || mdView.current.record.defaultTitle}}
 
         </h1>
-        <h2     class="text-warning"
+        <h2 class="text-warning"
                 data-ng-show="mdView.current.record.draft == 'Y'" 
                 data-translate="">Working Copy</h2>
-
+        
+        <h3>Abstract</h3>
         <div class="alert alert-info"
              data-ng-bind-html="(mdView.current.record.abstract || mdView.current.record.defaultAbstract) | linky | newlines"/>
 

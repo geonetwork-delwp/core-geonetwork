@@ -24,6 +24,8 @@
   <xsl:template mode="getOverviews" match="*"/>
   <xsl:template mode="getMetadataThumbnail" match="*"/>
   <xsl:template mode="getMetadataHeader" match="*"/>
+  
+  <xsl:template mode="renderExport" match="*"/>
   <!-- Those templates should be overriden in the schema plugin - end -->
 
   <!-- Starting point -->
@@ -32,6 +34,44 @@
       <xsl:when test="$root = 'div'">
         <!-- Render only a DIV with the record details -->
         <xsl:call-template name="render-record"/>
+      </xsl:when>
+	  <xsl:when test="$root = 'export'">
+        <div class="container-fluid gn-metadata-view gn-schema-{$schema}">
+          <xsl:apply-templates mode="renderExport" select="$metadata"/>
+        </div>
+      </xsl:when>
+      <xsl:when test="$root = 'html'">
+          <html>
+            <head>
+              <title>View Metadata</title>
+              
+              <!-- import css files directly -->
+              <style type="text/css">
+                <xsl:value-of select="replace( unparsed-text('https://services.land.vic.gov.au/SpatialDatamart/layoutResources/styles/formstyle.css', 'iso-8859-1'), '[&#xD;&#xA;]+', '' )"/>
+                <xsl:value-of select="replace( unparsed-text('https://services.land.vic.gov.au/SpatialDatamart/layoutResources/styles/layout.css', 'iso-8859-1'), '[&#xD;&#xA;]+', '' )"/>
+                <xsl:value-of select="replace( unparsed-text('https://services.land.vic.gov.au/SpatialDatamart/styles/text.css', 'iso-8859-1'), '[&#xD;&#xA;]+', '' )"/>
+                <xsl:value-of select="replace( unparsed-text('https://services.land.vic.gov.au/SpatialDatamart/styles/application.css', 'iso-8859-1'), '[&#xD;&#xA;]+', '' )"/>
+                <xsl:value-of select="replace( unparsed-text('https://services.land.vic.gov.au/SpatialDatamart/scripts/yahoo/tabview/assets/skins/sam/tabview.css', 'iso-8859-1'), '[&#xD;&#xA;]+', '' )"/>
+              </style>
+
+              <style type="text/css">
+                body,
+                html {
+                  margin:0;
+                  padding:0;
+                  height:100%;
+                }
+                
+              </style>
+      
+            </head>
+            <body>
+              <div class="gn-schema-{$schema} container-fluid gn-metadata-view">
+                <xsl:apply-templates mode="renderExport" select="$metadata"/>
+              </div>
+            </body>
+
+        </html>
       </xsl:when>
       <xsl:otherwise>
         <!-- Render complete HTML page -->

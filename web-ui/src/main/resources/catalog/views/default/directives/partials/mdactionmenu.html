@@ -84,6 +84,27 @@
         <i class="fa fa-share-alt"></i>&nbsp;
         <span data-translate="">exportRDF</span>
       </a></li>
+	  
+	  <hr />
+
+      <!-- PDF testing -->
+      <li><a data-ng-href="../api/records/{{md.getUuid()}}/formatters/sdm-pdf?root=export&output=pdf"
+             target="_blank">
+        <i class="fa fa-file-pdf-o"></i>&nbsp;
+        <span data-translate="">PDF Report</span>
+      </a></li>
+      <!-- HTML testing -->
+      <li><a data-ng-href="../api/records/{{md.getUuid()}}/formatters/sdm-html?root=html&output=html"
+              target="_blank">
+        <i class="fa fa-file-text-o"></i>&nbsp;
+        <span data-translate="">HTML report</span>
+      </a></li>
+      <!-- CIP testing -->
+      <li><a data-ng-href="../api/records/{{md.getUuid()}}/formatters/cip-pdf?root=export&output=pdf"
+              target="_blank">
+        <i class="fa fa-file-pdf-o"></i>&nbsp;
+        <span data-translate="">CIP report</span>
+      </a></li>
     </ul>
   </div>
 </div>
