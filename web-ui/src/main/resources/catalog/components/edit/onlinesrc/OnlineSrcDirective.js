@@ -1937,7 +1937,7 @@
                   };
 
                   scope.config = {
-                    associationType: null,
+                    associationType: 'isComposedOf',
                     initiativeType: null
                   };
 
