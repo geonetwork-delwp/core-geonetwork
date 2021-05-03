@@ -6,8 +6,8 @@
          xmlns:gml="http://www.opengis.net/gml#">
    <skos:ConceptScheme rdf:about="urn:delwp:sdm:conceptscheme:1.0">
       <dc:identifier>SDMCategories</dc:identifier>
-      <dc:title>DELWP SDM Product Categories</dc:title>
-      <dc:description>Victorian Government DELWP Spatial Data Mart (SDM) Product Categories</dc:description>
+      <dc:title>DELWP Categories</dc:title>
+      <dc:description>Victorian Government DELWP Categories</dc:description>
       <dc:URI>https://www.delwp.vic.gov.au</dc:URI>
       <dct:modified>2020-05-04</dct:modified>
       <dc:creator>
