@@ -102,6 +102,34 @@
         }
       };
 
+      $scope.altTitleOptions = {
+        mode: 'remote',
+        remote: {
+          url: suggestService.getUrl('QUERY', 'altTitle', 'STARTSWITHFIRST'),
+          filter: suggestService.bhFilter,
+          wildcard: 'QUERY'
+        }
+      };
+
+      $scope.ownerGroupOptions = {
+        mode: 'prefetch',
+        promise: (function() {
+          var defer = $q.defer();
+          $http.get('../api/groups', {cache: true}).
+              success(function(data) {
+                var res = [];
+                for (var i = 0; i < data.length; i++) {
+                  res.push({
+                    id: data[i].id,
+                    name: data[i].label.eng
+                  });
+                }
+                defer.resolve(res);
+              });
+          return defer.promise;
+        })()
+      };
+
       $scope.categoriesOptions = {
         mode: 'prefetch',
         promise: (function() {

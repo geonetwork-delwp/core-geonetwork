@@ -2,9 +2,12 @@
   <div class="row">
 
     <!--Region picker-->
+    <!-- We don't use geonames in marlin, instead we allow extents to be added from the
+         AODN named extents 
     <div class="col-md-9">
       <div data-gn-region-picker=""></div>
     </div>
+   -->
 
     <!--Draw Button-->
     <div class="col-md-3" ng-if="!readOnly">
@@ -58,6 +61,7 @@
   </div>
 
   <!--Projection selector-->
+  <!--
   <div class="btn-group">
     <button type="button" class="btn btn-link dropdown-toggle"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -72,6 +76,7 @@
       </li>
     </ul>
   </div>
+  -->
 
   <!--Map and coordinates inputs-->
   <table class="text-center">

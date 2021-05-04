@@ -230,8 +230,8 @@
       requireProxy: [],
       gnCfg: angular.copy(defaultConfig),
       gnUrl: '',
-      docUrl: 'https://confluence.csiro.au/display/DataCentreShared/',
-      //docUrl: '../../doc/',
+      csiroDocUrl: 'https://confluence.csiro.au/display/DataCentreShared/',
+      docUrl: '../../doc/',
       modelOptions: {
         updateOn: 'default blur',
         debounce: {
@@ -382,8 +382,9 @@
       $scope.socialMediaLink = $location.absUrl();
       $scope.$on('$locationChangeSuccess', function(event) {
         $scope.socialMediaLink = $location.absUrl();
-        $scope.showSocialMediaLink =
-            ($scope.socialMediaLink.indexOf('/metadata/') != -1);
+        // $scope.showSocialMediaLink =
+        //     ($scope.socialMediaLink.indexOf('/metadata/') != -1);
+        $scope.showSocialMediaLink = false;
       });
       $scope.getPermalink = gnUtilityService.getPermalink;
 

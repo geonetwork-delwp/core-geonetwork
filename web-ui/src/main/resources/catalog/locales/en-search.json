@@ -464,5 +464,7 @@
   "GUFrequired": "Required",
   "GUFtooLong": "Too long",
   "GUFnotValidFormat": "Not a valid format",
-  "jurisdiction": "Jurisdiction"
+  "jurisdiction": "Jurisdiction",
+  "ownerGroup": "Group that owns metadata",
+  "altTitle": "Alternate Title"
 }
