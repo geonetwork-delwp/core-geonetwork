@@ -98,6 +98,7 @@
     <facet name="createDateYear" indexKey="createDateYear" label="createDateYears"/>
     <facet name="format" indexKey="format" label="formats"/>
     <facet name="title" indexKey="title" label="titles"/>
+    <facet name="altTitle" indexKey="altTitle" label="alttitles"/>
     <facet name="metadataType" indexKey="_isTemplate" label="metadataTypes"/>
     <facet name="isValid" indexKey="_valid" label="isValid"/>
     <facet name="isHarvested" indexKey="_isHarvested" label="isHarvested"/>
@@ -285,6 +286,7 @@
     <summaryType name="suggestions">
       <item facet="keyword"/>
       <item facet="title" sortOrder="desc" max="100"/>
+      <item facet="altTitle" sortOrder="desc" max="100"/>
       <item facet="inspireTheme" sortBy="value" sortOrder="asc"/>
       <item facet="denominator" sortBy="value" sortOrder="asc"/>
       <item facet="spatialRepresentationType"
