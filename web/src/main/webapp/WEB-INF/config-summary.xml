@@ -144,7 +144,6 @@
     <facet name="otherkeyword" label="otherkeywords" indexKey="otherkeyword"/>
     <facet name="sdmCategory" label="sdmCategory" indexKey="thesaurus-SDMCategories"/>
     <facet name="jurisdiction" label="jurisdiction" indexKey="jurisdiction"/>
-    <facet name="sdmCategory" label="sdmCategory" indexKey="thesaurus-SDMCategories"/>
     <facet name="mdActions" indexKey="_mdActions" label="mdActions"/>
   </facets>
 
