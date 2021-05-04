@@ -403,6 +403,7 @@
     "confirmCreateDraft": "This is an APPROVED record. Editing it will create a Draft/Working copy which must be submitted and reviewed. Press OK to create and edit draft or CANCEL.",
     "rasterType": "Raster Type",
     "rasterAssemblyType": "Raster Assembly Type",
+    "sdmCategory": "DELWP Categories",
     "stakeholderType": "Contact Type",
     "platformType": "Platform Type"
 }
