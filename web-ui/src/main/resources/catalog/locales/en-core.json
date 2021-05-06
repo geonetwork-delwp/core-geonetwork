@@ -407,5 +407,5 @@
     "resClassification": "Resource Constraints",
     "mdClassification": "Metadata Constraints",
     "stakeholderType": "Contact Type",
-    "platformType": "Platform Type"
+    "platformType": "Raster Platform Type"
 }
