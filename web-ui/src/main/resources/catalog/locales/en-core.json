@@ -404,6 +404,8 @@
     "rasterType": "Raster Type",
     "rasterAssemblyType": "Raster Assembly Type",
     "sdmCategory": "DELWP Categories",
+    "resClassification": "Resource Constraints",
+    "mdClassification": "Metadata Constraints",
     "stakeholderType": "Contact Type",
     "platformType": "Platform Type"
 }
