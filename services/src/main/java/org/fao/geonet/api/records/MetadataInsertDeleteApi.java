@@ -637,6 +637,7 @@ public class MetadataInsertDeleteApi {
         boolean generateUuid = sm.getValueAsBool(Settings.SYSTEM_METADATACREATE_GENERATE_UUID);
 
 
+        //System.out.println("TargetUUID: "+targetUuid);
         // User assigned uuid: check if already exists
         String metadataUuid = null;
         if (generateUuid) {
@@ -654,6 +655,7 @@ public class MetadataInsertDeleteApi {
                     }
                 } catch (ResourceNotFoundException e) {
                     // Ignore. Ok to create a new record with the requested UUID.
+                  metadataUuid = targetUuid;
                 }
             }
         } else {
@@ -677,6 +679,7 @@ public class MetadataInsertDeleteApi {
             }
         }
 
+        //System.out.println("MetadataUUID: "+metadataUuid);
         ServiceContext context = ApiUtils.createServiceContext(request);
         String newId = appContext.getBean(IMetadataManager.class).createMetadata(context,
             String.valueOf(sourceMetadata.getId()),
