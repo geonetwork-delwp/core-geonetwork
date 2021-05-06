@@ -67,12 +67,14 @@
           <i class="fa fa-key"></i>&nbsp;<span translate>updatePrivileges</span>
         </a>
       </li>
+      <!--
       <li  data-ng-show="!excludePattern.test('updateStatus')"
            data-ng-if="user.isEditorOrMore()">
         <a href="" data-ng-click="mdService.openStatusBatchPanel(getCatScope(), searchResults.selectionBucket)">
           <i class="fa fa-bell"></i>&nbsp;<span ng-if="user.isReviewerOrMore()" translate>updateStatus</span><span ng-if="user.isEditor()" translate>submitToReviewer</span>
         </a>
       </li>
+      -->
       <li  data-ng-show="!excludePattern.test('editRecords')"
            data-ng-if="v.service === 'catalog.edit' && user.isReviewerOrMore()">
         <a href="" data-ng-click="mdService.openBatchEditing(getCatScope())">
@@ -109,7 +111,7 @@
       </li>
       -->
       <li  data-ng-show="!excludePattern.test('delete')"
-           data-ng-if="user.isEditorOrMore()">
+           data-ng-if="user.isReviewerOrMore()">
         <a href="" data-ng-click="mdService.deleteMd(undefined, searchResults.selectionBucket)"
            data-gn-confirm-click="{{'deleteSelectedRecordConfirm' | translate:searchResults}}">
           <i class="fa fa-times"></i>&nbsp;<span translate>delete</span>
