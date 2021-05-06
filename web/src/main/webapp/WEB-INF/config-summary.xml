@@ -143,7 +143,9 @@
     <facet name="project" label="projects" indexKey="project"/>
     <facet name="gcmd" label="gcmds" indexKey="gcmd"/>
     <facet name="otherkeyword" label="otherkeywords" indexKey="otherkeyword"/>
-    <facet name="sdmCategory" label="sdmCategory" indexKey="thesaurus-SDMCategories"/>
+    <facet name="sdmCategory" label="sdmCategory" indexKey="thesaurus-local.theme.DELWPCategories"/>
+    <facet name="resClassification" label="resClassification" indexKey="resClassification"/>
+    <facet name="mdClassification" label="mdClassification" indexKey="mdClassification"/>
     <facet name="jurisdiction" label="jurisdiction" indexKey="jurisdiction"/>
     <facet name="mdActions" indexKey="_mdActions" label="mdActions"/>
   </facets>
@@ -157,6 +159,8 @@
             translator="codelist:mcc:MD_SpatialRepresentationTypeCode"/>
       <item facet="sensorType" max="40"/>
       <item facet="sdmCategory" max="40"/>
+      <item facet="resClassification" max="40"/>
+      <item facet="mdClassification" max="40"/>
       <item facet="jurisdiction" max="40"/>
       <item facet="category" max="99" sortBy="value"
             translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
@@ -263,6 +267,8 @@
     </summaryType>
     <summaryType name="results_with_summary">
       <item facet="sdmCategory" max="40"/>
+      <item facet="resClassification" max="40"/>
+      <item facet="mdClassification" max="40"/>
       <item facet="rasterType" max="40" translator="codelist:mcc:MD_ScopeCode"/>
       <item facet="rasterAssemblyType" max="40" translator="codelist:delwp:MD_AssemblyCode"/>
       <item facet="platformType" max="40" translator="codelist:delwp:MD_PlatformTypeCode"/>
