@@ -466,5 +466,5 @@
   "GUFnotValidFormat": "Not a valid format",
   "jurisdiction": "Jurisdiction",
   "ownerGroup": "Group that owns metadata",
-  "altTitle": "Alternate Title"
+  "altTitle": "Resource Name"
 }

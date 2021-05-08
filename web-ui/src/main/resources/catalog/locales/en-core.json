@@ -401,7 +401,7 @@
     "loginTitle": "Sign in",
     "loginText": "Sign in with your username and password to add and edit metadata.",
     "confirmCreateDraft": "This is an APPROVED record. Editing it will create a Draft/Working copy which must be submitted and reviewed. Press OK to create and edit draft or CANCEL.",
-    "rasterType": "Raster Type",
+    "rasterType": "Resource Type",
     "rasterAssemblyType": "Raster Assembly Type",
     "sdmCategory": "DELWP Categories",
     "resClassification": "Resource Constraints",
